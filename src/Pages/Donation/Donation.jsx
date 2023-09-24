@@ -1,12 +1,34 @@
+import { useLoaderData } from "react-router-dom";
 import DonatedCard from "../../Components/DonatedCard/DonatedCard";
+import { getStoredDonateIds } from "../../Utility/LocalStorage";
+import { useEffect, useState } from "react";
 
 const Donation = () => {
+    const donations = useLoaderData();
+
+    const [findDonationIds, setFindDonationIds] = useState([]);
+
+    useEffect(() => {
+        const storedDonationIds = getStoredDonateIds();
+
+        const donationIds = [];
+
+        for (const id of storedDonationIds) {
+            const donation = donations.find(donation => donation.id === id);
+
+            if (donation) {
+                donationIds.push(donation)
+            }
+        }
+
+        setFindDonationIds(donationIds);
+    }, []);
     return (
         <div className="my-20 max-w-[1024px] mx-auto px-6">
             <div className="grid grid-cols-2 gap-5">
-                <DonatedCard />
-                <DonatedCard />
-                <DonatedCard />
+                {
+                    findDonationIds.map(donate => <DonatedCard key={donate.id} donate={donate} />)
+                }
             </div>
 
             <div className="flex justify-center mt-16">

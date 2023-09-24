@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveDonateId } from "../../Utility/LocalStorage";
 
 const DonationDetails = () => {
 
@@ -14,6 +15,10 @@ const DonationDetails = () => {
         setDonate(findDonateId);
     }, [donateId, donates]);
 
+    const handleAddToDonation = () => {
+        saveDonateId(donate.id)
+    }
+
     return (
         <div className="py-20 max-w-[1024px] mx-auto px-6">
             <div>
@@ -23,7 +28,7 @@ const DonationDetails = () => {
                     <div className="w-full h-32 bg-black absolute bottom-0 opacity-60">
                     </div>
 
-                    <button className={`absolute bottom-8 left-8 text-white bg-${donate.text_color} px-10 py-4 rounded-md font-medium text-xl`}>
+                    <button onClick={handleAddToDonation} className={`absolute bottom-8 left-8 text-white bg-${donate.text_color} px-10 py-4 rounded-md font-medium text-xl`}>
                         Donate ${donate.price}
                     </button>
                 </div>

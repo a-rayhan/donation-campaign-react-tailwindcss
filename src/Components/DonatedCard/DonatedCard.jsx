@@ -1,20 +1,23 @@
-const DonatedCard = () => {
+const DonatedCard = ({ donate }) => {
+    const { id, image, category, title, price, category_bg, card_bg, text_color } = donate;
     return (
         <div>
-            <div className="w-full h-full bg-slate-400 rounded-lg cursor-pointer flex">
-                <div className="w-48 h-full bg-blue-500 mb-4 rounded-s-lg"></div>
+            <div className={`w-full h-full ${card_bg} rounded-lg cursor-pointer flex`}>
+                <div className={`w-48 h-full mb-4 rounded-s-lg`}>
+                    <img src={image} alt="" className="w-full h-full object-cover rounded-s-lg" />
+                </div>
 
                 <div className="p-4">
-                    <button className="bg-slate-300 px-5 py-1 rounded-md mb-3 text-xs">
-                        Health
+                    <button className={`${category_bg} ${text_color} px-5 py-1 rounded-md mb-3 text-xs`}>
+                        {category}
                     </button>
 
                     <h2 className="font-medium text-lg">
-                        Clean water for children
+                        {title}
                     </h2>
 
-                    <p className="font-medium text-xl mb-5">
-                        $290.00
+                    <p className={`${text_color} font-medium text-xl mb-5`}>
+                        ${price}
                     </p>
 
                     <button className="px-5 py-1 rounded-md mb-3 font-medium text-white bg-blue-500">
