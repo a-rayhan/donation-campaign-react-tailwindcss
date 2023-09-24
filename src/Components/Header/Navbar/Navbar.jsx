@@ -4,7 +4,7 @@ import Logo from "../../../assets/Logo.png";
 const Navbar = () => {
     return (
         <div>
-            <nav className="max-w-[1024px] mx-auto flex justify-between items-center h-14 py-10">
+            <nav className="max-w-[1024px] mx-auto px-6 flex justify-between items-center h-14 py-10">
                 <NavLink to='/' className='text-2xl font-semibold'>
                     <img src={Logo} alt="" width={200} />
                 </NavLink>

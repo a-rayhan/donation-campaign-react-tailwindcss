@@ -1,7 +1,14 @@
+import { useLoaderData } from "react-router-dom";
+import Donations from "../../Components/Donations/Donations";
+import Banner from "../../Components/Header/Banner/Banner";
+
 const Home = () => {
+    const data = useLoaderData();
+
     return (
         <div>
-            Home
+            <Banner />
+            <Donations data={data} />
         </div>
     );
 };
