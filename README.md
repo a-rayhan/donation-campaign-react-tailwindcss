@@ -1,8 +1,7 @@
-# React + Vite
+# Project features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- ### Dynamic Routes: Implement a donations card click action to redirect the dynamically donation details page. Create a dynamic route for the Donation Details page. 
 
-Currently, two official plugins are available:
+- ### Toast Funtionality: Display details of the donation details page. Include a "Donate" button. On clicking "Donate," show a toast to success or exists.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ### See All Feature: Implement a "See All" button that expands to show all donation data when clicked.
