@@ -25,7 +25,7 @@ const Donation = () => {
     }, []);
     return (
         <div className="my-20 max-w-[1024px] mx-auto px-6">
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid lg:grid-cols-2 gap-5">
                 {
                     findDonationIds.map(donate => <DonatedCard key={donate.id} donate={donate} />)
                 }

@@ -25,10 +25,10 @@ const DonationDetails = () => {
                 <div className="w-full h-[450px] bg-slate-500 rounded-xl mb-10 relative">
                     <img src={donate.image} alt="" className="w-full h-full object-cover rounded-xl" />
 
-                    <div className="w-full h-32 bg-black absolute bottom-0 opacity-60">
+                    <div className="w-full h-32 bg-black rounded-b-xl absolute bottom-0 opacity-60">
                     </div>
 
-                    <button onClick={handleAddToDonation} className={`absolute bottom-8 left-8 text-white bg-${donate.text_color} px-10 py-4 rounded-md font-medium text-xl`}>
+                    <button onClick={handleAddToDonation} className={`absolute bottom-8 left-8 text-white ${donate.text_color} bg-blue-500 px-10 py-4 rounded-md font-medium text-xl`}>
                         Donate ${donate.price}
                     </button>
                 </div>
