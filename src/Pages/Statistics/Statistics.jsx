@@ -1,5 +1,8 @@
 import { PieChart } from "@mui/x-charts";
 
+const donation = `${100}`;
+const donated = 30;
+
 const Statistics = () => {
     return (
         <div className="flex justify-center items-center my-20">
@@ -7,12 +10,12 @@ const Statistics = () => {
                 series={[
                     {
                         data: [
-                            { id: 0, value: 10},
-                            { id: 1, value: 15},
+                            { id: 0, value: `${donation}`, label: 'Donation' },
+                            { id: 1, value: `${donated}`, label: 'Donated' },
                         ],
                     },
                 ]}
-                width={500}
+                width={300}
                 height={400}
             />
         </div>
