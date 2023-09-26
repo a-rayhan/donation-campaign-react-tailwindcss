@@ -33,7 +33,7 @@ const Donation = () => {
             </div>
 
             <div className={`flex justify-center mt-16 ${findDonationIds.length <= 4 && 'hidden'} ${dataLength === findDonationIds.length && 'hidden'}`}>
-                <button onClick={() => setDatalength(findDonationIds.length)} className="px-10 py-3 rounded-lg mb-3 font-medium text-white bg-blue-500 text-xl">
+                <button onClick={() => setDatalength(findDonationIds.length)} className="px-10 py-3 rounded-lg mb-3 font-medium text-white bg-green-700 text-xl">
                     See All
                 </button>
             </div>

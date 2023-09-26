@@ -1,3 +1,5 @@
+import swal from 'sweetalert';
+
 const getStoredDonateIds = () => {
     const storedDonateIds = localStorage.getItem('donations');
 
@@ -15,9 +17,9 @@ const saveDonateId = id => {
     if (!isExist) {
         storedDonateIds.push(id);
         localStorage.setItem('donations', JSON.stringify(storedDonateIds))
-        alert('Added!')
+        swal("Thank you!", "Your donation added successfully", "success");
     } else {
-        alert('Already added!')
+        swal("Oops!", "You already donated in this category! Please see your donation page. Thanks again for your donation!", "warning");
     }
 }
 
