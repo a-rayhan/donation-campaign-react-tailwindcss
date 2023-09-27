@@ -6,7 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 
 
 const Navbar = () => {
-    const [toggleMenu, setToggleMenu] = useState(false);
+    const [toggleMenu, setToggleMenu] = useState(!false);
     return (
         <div>
             <nav className="max-w-[1024px] mx-auto px-6 flex justify-between items-center h-14 py-10">
